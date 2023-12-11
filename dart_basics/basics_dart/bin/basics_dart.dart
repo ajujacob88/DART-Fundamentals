@@ -60,5 +60,153 @@ void main() {
 
   */
 
+/*
   //SECTION 3 - DATA TYPES
+
+  //Numbers, strings, booleans, lists, maps, dynamic
+
+  //strings
+  String singleQuotes = 'forSingleword';
+  print("string singleQuotes: $singleQuotes");
+  print(singleQuotes.length);
+
+  String doubleQuotes =
+      "for multiple wwords also and I'm aju \" using escape sequence";
+  print("string doubleQuotes: $doubleQuotes");
+
+  String threeQuotes = '''for multple lines 
+   like 
+   address''';
+  print("string threeQuotes: $threeQuotes");
+
+  //Integers
+  int myNum = 45;
+  print("Integer: $myNum");
+
+  //Doubles - for decimal numbers
+  double otherNum = 55.23;
+  print("Double: $otherNum");
+
+  double otherNum2 = 55;
+  print("Double: $otherNum2");
+
+  //num - can be used to store integer or double
+  num number1 = 20.2;
+  num number2 = 10;
+  print("num: $number1 and $number2");
+
+  //Boolean
+  bool myBool = false;
+  print("Boolean: $myBool");
+
+  //Dynamic - similar to var
+  dynamic fullName = "Aju JA";
+  print("Dynamic: $fullName");
+
+  */
+
+/*
+  //SECTION 4 - if else
+  var input = stdin.readLineSync();
+  var inputNum = int.parse(input!);
+  if (inputNum < 0) {
+    print('Negative');
+  } else if (inputNum == 0) {
+    print('Zero');
+  } else {
+    print('positive');
+  }
+
+  //for loop
+  for (var i = 0; i < 10; i++) {
+    print(i);
+  }
+
+  //while
+
+  int i = 1;
+  while (i < 10) {
+    print(i);
+    i++;
+  }
+
+  //do while
+
+  do {
+    print("i is $i");
+    i--;
+  } while (i == 10);
+  */
+
+  //SECTION 5 -LIST (same as array, here in dart instead of array list is there)
+  List<int> numberList = [];
+  numberList = [1, 2, 3, 4];
+
+  List<int> numberList2 = [5, 6, 7, 8];
+
+  var anylist = [20, "Dynamic since var", 25];
+
+  List<String> stringList = ['aju', 'anu'];
+
+  print(numberList);
+
+  print(numberList2);
+
+  print(anylist);
+
+  print(stringList);
+
+  //array operations
+  print(numberList.length);
+
+  //finding a number from a list - no need to use for loop, just use contains
+  if (numberList.contains(3)) {
+    print("3 is present");
+  }
+
+  //add a number to list
+  numberList.add(25);
+  print(numberList);
+  //remove a value from 3rd position,, similarly many remove functions is there...
+  numberList.removeAt(2);
+  print(numberList);
+
+  numberList.removeWhere((element) => element == 2);
+  print(numberList);
+
+  //add another list to a list
+  numberList.addAll(numberList2);
+  print(numberList);
+
+  numberList.addAll({100, 101, 102});
+  print(numberList);
+
+  print(numberList.join("aju"));
+
+  //NESTED LIST
+  List<List<int>> nestedList = [
+    [1, 2, 3, 4],
+    [5, 4, 7],
+    [4, 5, 6, 6, 6]
+  ];
+
+  print(nestedList);
+
+  //print the 01th item
+  print(nestedList[0][1]);
+
+  List<List<List<int>>> nested2 = [
+    [
+      [52, 25],
+      [52, 44, 44]
+    ],
+    [
+      [25, 32, 5],
+      [25, 45]
+    ]
+  ];
+
+  print(nested2);
+
+  print(nested2[0][1]);
 }
