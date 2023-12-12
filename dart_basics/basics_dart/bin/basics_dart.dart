@@ -138,11 +138,14 @@ void main() {
   } while (i == 10);
   */
 
+/*
   //SECTION 5 -LIST (same as array, here in dart instead of array list is there)
   List<int> numberList = [];
   numberList = [1, 2, 3, 4];
+  numberList[2] = 100;
 
   List<int> numberList2 = [5, 6, 7, 8];
+
 
   var anylist = [20, "Dynamic since var", 25];
 
@@ -151,6 +154,8 @@ void main() {
   print(numberList);
 
   print(numberList2);
+  print(numberList2[1]);
+  
 
   print(anylist);
 
@@ -183,6 +188,8 @@ void main() {
 
   print(numberList.join("aju"));
 
+  numberList.insert(2,900)  //insert at a specific position (position, item)
+
   //NESTED LIST
   List<List<int>> nestedList = [
     [1, 2, 3, 4],
@@ -209,4 +216,94 @@ void main() {
   print(nested2);
 
   print(nested2[0][1]);
+
+    //iteration in a list - for in loop
+  var names = [1, 2, "hi", "hoo"];
+  for (var i in names) {
+    print(i);
+  }
+
+*/
+/*
+  //SECTION 6
+  //SET
+
+  List<int> numbList = [1, 2, 3, 4, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4];
+
+  Set<int> numbset = {1, 2, 3, 4, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4};
+
+  print("List is: $numbList");
+
+  print("Set is $numbset");
+
+  var anyList = [1, 2, 1, 'aju', 2, 'aju'];
+
+  List<dynamic> dynamicList;
+  dynamicList = anyList;
+
+  print(dynamicList);
+
+  Set<int> intSet;
+  intSet = numbset;
+  intSet.addAll(numbset);
+  intSet.add(45);
+
+  print(intSet);
+
+  Set<dynamic> dynamicSet = {1, 2, 'aju', 'anu', 'aju'};
+  print(dynamicSet);
+
+  */
+
+  //SECTION 7
+  //MAP
+
+  Map<String, String> myMaps = {'name': "aju", "age": '52'};
+
+  Map<String, int> myMaps2 = {'age': 32, 'pin': 686, 'pin2': 686};
+
+  Map<dynamic, dynamic> dynamicmap = {'name': 'aj', 'age': 32.0, 25: 'hi'};
+
+  var anyMap = {'name': 'aju', 'age': 20};
+
+  print(myMaps);
+  print(myMaps2);
+  print(dynamicmap);
+  print(anyMap);
+
+  print(anyMap['age']);
+  print(myMaps['age']);
+  print(myMaps2[686]);
+  print(dynamicmap[25]);
+
+  print("keys only: ${anyMap.keys}");
+  print("values only: ${anyMap.values}");
+
+  print(dynamicmap.length);
+
+  //add something
+  dynamicmap['name'] = 'AJU JACOB';
+  dynamicmap['name2'] = 'ANU JACOB';
+  print(dynamicmap);
+
+  dynamicmap.addAll({5: 'gi', 'sh': 645});
+  dynamicmap.remove('name2');
+  print(dynamicmap);
+
+  //remove everything
+  dynamicmap.clear();
+  print(dynamicmap);
+
+  //iteration in a list - for in loop
+  var names = [1, 2, "hi", "hoo"];
+  for (var i in names) {
+    print(i);
+  }
+
+  //iteration in a map - for in loop
+  var map2 = {"aju": 2, "jus": "sad"};
+  for (var entry in map2.entries) {
+    print("key: ${entry.key}");
+    print("value: ${entry.value}");
+  }
 }
