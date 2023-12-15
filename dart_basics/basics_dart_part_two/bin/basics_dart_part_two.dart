@@ -17,7 +17,21 @@ void main() {
       print("i am : ${f + s}");
     },
   );
+
+  //Future Functions
+
+  sumFuture(10, 12);
+  print("after invoking sumFuture");
+
+  sumFuture2();
+  print("after future printed from main");
 }
+
+//also we can make the main function as a future function and then we can use await there..
+// Future<void> main() async {
+//   await sumFuture2();
+//   print("asdasdadas");
+// }
 
 void sum() {
   print(2 + 3);
@@ -52,4 +66,23 @@ void sumRequired(
 //passing function as an argument
 void sumFunction(int a, int b, void Function(int, int) customSum) {
   customSum(a, b);
+}
+
+Future<void> sumFuture(int a, int b) async {
+  await Future.delayed(Duration(seconds: 8));
+  print("Sum Future issss: ${a + b}");
+}
+
+//use the value of future function in another future function
+Future<int> sumFutureReturn(int a, int b) async {
+  await Future.delayed(Duration(seconds: 3));
+  print("In Sum Future: ${a + b}");
+  return a + b;
+}
+
+Future<void> sumFuture2() async {
+  // sumFutureReturn(30, 25);
+  await sumFutureReturn(30,
+      25); //await can only be used inside future function.. it is to wait for that function to complete.. await can obly be used inside a future function..
+  print("in just sum");
 }
