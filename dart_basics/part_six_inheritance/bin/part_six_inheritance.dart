@@ -55,7 +55,8 @@ class PlaceNameWithInterface implements Place {
 
   @override
   void country() {
-    print('this must be implemented here');
+    print(
+        'this must be implemented here,, all the concrete implementations are must');
   }
 }
 
