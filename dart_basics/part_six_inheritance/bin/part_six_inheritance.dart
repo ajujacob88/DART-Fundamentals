@@ -77,4 +77,7 @@ void main(List<String> arguments) {
 
   var placeName = PlaceName();
   placeName.name();
+
+  var forAbstract = PlaceNameWithInterface();
+  forAbstract.country();
 }
